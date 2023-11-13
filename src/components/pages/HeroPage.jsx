@@ -1,8 +1,9 @@
-import React from 'react'
+import React from "react";
 import Typed from "react-typed";
+import "./PageAnimation.css";
 
 const HeroPage = () => {
-    const staticText = "Software Consulting and Development";
+  const staticText = "Software Consulting and Development";
 
   return (
     <div className="container-fluid">
@@ -24,13 +25,13 @@ const HeroPage = () => {
                 className="typed-input"
                 style={{
                   backdropFilter: "blur(10px)",
-              backgroundColor: "transparent",
-       display: "inline-block",
+                  backgroundColor: "transparent",
+                  display: "inline-block",
                   minWidth: "200px",
                   padding: "5px",
                   border: "1px solid white",
                   color: "yellow",
-                  borderRadius:"10px"
+                  borderRadius: "10px",
                 }}
               >
                 <Typed
@@ -52,7 +53,7 @@ const HeroPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroPage
+export default HeroPage;

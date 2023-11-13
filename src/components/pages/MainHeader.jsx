@@ -1,16 +1,20 @@
 import React from "react";
+import logo from "../../assets/craftooologo.png";
 import "../pages/MainHeader.css";
-import logo from "../../assets/craftoooimg.png";
+import { Link } from "react-router-dom";
+
 const MainHeader = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
-      <div className="container">
-        <img
-          className="navbar-brand"
-          src={logo}
-          style={{ maxWidth: "600px", height: "70px" }}
-          alt="Logo"
-        />
+    <nav className="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top rounded-3">
+      <div className="container rounded-3">
+        <Link to="/">
+          <img
+            className="navbar-brand"
+            src={logo}
+            style={{ maxWidth: "600px", height: "70px" }}
+            alt="Logo"
+          />
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -24,7 +28,7 @@ const MainHeader = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul
-            className="navbar-nav ms-auto"
+            className="navbar-nav ms-auto rounded-3"
             style={{
               backdropFilter: "blur(10px)",
               backgroundColor: "rgba(0, 0, 0, 0.5)",
@@ -32,124 +36,96 @@ const MainHeader = () => {
             }}
           >
             <li className="nav-item dropdown">
-              <a
-                className="nav-link active dropdown-toggle"
-                href="/"
-                role="button"
-                data-bs-toggle="dropdown"
-              >
+              <Link className="nav-link active" to="/about" role="button">
                 About
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="/">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
+              </Link>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link active dropdown-toggle"
-                href="/"
+                to="/services"
                 data-bs-toggle="dropdown"
               >
                 Services
-              </a>
+              </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="/">
-                    Action
-                  </a>
+                  <Link className="dropdown-item" to="/services">
+                    Software Development
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/">
-                    Another action
-                  </a>
+                  <Link className="dropdown-item" to="/services">
+                    Web Development
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/">
-                    Something else here
-                  </a>
+                  <Link className="dropdown-item" to="/services">
+                    Mobile App Development
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/services">
+                    UI/UX Design
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/services">
+                    IT Consulting
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link active dropdown-toggle"
-                href="/"
+                to="/"
                 data-bs-toggle="dropdown"
               >
                 Solutions
-              </a>
+              </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="/">
-                    Action
-                  </a>
+                  <Link className="dropdown-item" to="/solutions">
+                    Human Resources
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/">
-                    Another action
-                  </a>
+                  <Link className="dropdown-item" to="/solutions">
+                    eLearning
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/">
-                    Something else here
-                  </a>
+                  <Link className="dropdown-item" to="/solutions">
+                    Ecommerce
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/solutions">
+                    Web Portals
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <a
-                className="nav-link active dropdown-toggle"
-                href="/"
-                data-bs-toggle="dropdown"
-              >
+              <Link className="nav-link active" to="/technology">
                 Technologies
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="/">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="/">
+              <Link className="nav-link active" to="/">
                 Portfolio
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="/">
+              <Link className="nav-link active" to="/">
                 Pricing
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="/">
+              <Link className="nav-link active" to="/">
                 Blog
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <i className="nav-link bi bi-search"></i>
@@ -157,8 +133,11 @@ const MainHeader = () => {
             <li className="nav-item">
               <div>
                 <button className="btn">
-                  <i className="animation"></i>Contact us
-                  <i className="animation"></i>
+                  <Link className="nav-link active" to="/contact" role="button">
+                    <i className="animation"></i>
+                    Contact us
+                    <i className="animation"></i>
+                  </Link>
                 </button>
               </div>
             </li>
